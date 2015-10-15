@@ -137,6 +137,7 @@ cc_binary(
   name = "cryptest",
   deps = [
     ':cryptopp',
+    '//external:pthread',
   ],
   srcs = [
     'bench.cpp',
@@ -150,5 +151,9 @@ cc_binary(
     'regtest.cpp',
     'fipsalgt.cpp',
     'dlltest.cpp',
+  ],
+  data = [
+    'TestData',
+    'TestVectors',
   ],
 )
