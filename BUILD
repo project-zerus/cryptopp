@@ -3,6 +3,10 @@ licenses(['notice'])
 cc_library(
   name = "cryptopp",
   visibility = ['//visibility:public'],
+  hdrs = glob([
+    '*.h',
+    '*.cpp',
+  ]),
   srcs = [
     '3way.cpp',
     'adler32.cpp',
